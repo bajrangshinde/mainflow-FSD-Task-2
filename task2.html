@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cars Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+    <header class="box">
+        <div class="logo">
+            <span class="logo_des">The Cars Gallery</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Cars Here">
+        </div>
+        <div class="list">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Car Gallery</a></li>
+                    <li><a href="#contact" onclick="showContactForm()">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section with Background Image -->
+    <main id="home" class="home-section">
+        <div class="cars">
+            <h2>"Take care of your car in the garage,<br>and the car will take care of you on the road."</h2>
+        </div>
+    </main>
+
+    <!-- Car Gallery Section with Slideshow -->
+    <section id="gallery" class="slideshow-container">
+        <h3>Car Gallery</h3>
+        <span class="ga"><p>Explore our gallery to see our exclusive car collection below.</p></span>
+        <div class="mySlides fade">
+            <img src="car1.jpg" alt="Car 1">
+            <div class="caption">Classic Car 1</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="car2.jpg" alt="Car 2">
+            <div class="caption">Luxury Car 2</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="car3.jpg" alt="Car 3">
+            <div class="caption">Sport Car 3</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="car4.jpg" alt="Car 3">
+            <div class="caption">Lambo Car </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="car5.jpg" alt="Car 3">
+            <div class="caption">Benz Car </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <!-- Contact Form Section, Initially Hidden -->
+    <section id="contact" class="contact-form hidden">
+        <h3>Contact Us</h3>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="task2.js"></script>
+</body>
+
+</html>
